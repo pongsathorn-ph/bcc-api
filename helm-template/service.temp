@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bcc-api-service
+  labels:
+    app: bcc-api-app
+spec:
+  ports:
+    - name: bcc-api-app
+      port: 80
+      targetPort: 80
+  selector:
+    app: bcc-api-app
+  type: ClusterIP
